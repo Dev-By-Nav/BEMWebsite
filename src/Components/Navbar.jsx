@@ -51,25 +51,26 @@ const Navbar = () => {
             <Link to='/contact-us'>Contact Us</Link>
           </li>
         </ul>
-        <div onClick={handleNav} className='block md:hidden cursor-pointer text-bem-primary hover:text-bem-primary mr-4'>
+        <div onClick={handleNav} className={` ${scrolling ? 'text-white' : ''} block md:hidden cursor-pointer text-bem-primary mr-4`}>
           {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
         </div>
+
         <div
           className={`${
             nav ? 'fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-white ease-in-out duration-500 md:hidden' : 'fixed left-[-100%] z-50'
           }`}
         >
-          <ul className='p-4 cursor-pointer text-white  font-semibold'>
-            <li className='p-4 border-b hover:text-bem-primary border-bem-primary  font-medium'>
+          <ul className='p-4 cursor-pointer text-bem-primary  font-semibold'>
+            <li className='p-4 border-b  border-bem-primary hover:text-black font-medium'>
               <Link to='/'>Home</Link>
             </li>
-            <li className='p-4 border-b hover:text-bem-primary border-bem-primary  font-medium'>
+            <li className='p-4 border-b  border-bem-primary hover:text-black font-medium'>
               <Link to='/services'>Services</Link>
             </li>
-            <li className='p-4 border-b hover:text-bem-primary border-bem-primary  font-medium'>
+            <li className='p-4 border-b  border-bem-primary hover:text-black font-medium'>
               <Link to='/portfolio'>Portfolio</Link>
             </li>
-            <li className='p-4 hover:text-white font-medium flex-row'>
+            <li className='p-4 font-medium hover:text-black flex-row'>
               <Link to='/contact-us'>Contact Us</Link>
             </li>
           </ul>
