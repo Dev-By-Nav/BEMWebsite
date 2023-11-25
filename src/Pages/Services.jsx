@@ -3,7 +3,7 @@ import Navbar from '../Components/Navbar'
 
 function Services() {
   return (
-    <div>
+    <div className='bg-black'>
         <Navbar />
     </div>
   )

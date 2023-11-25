@@ -1,0 +1,26 @@
+
+    /* Scrollbar styling */
+    .scroll-container {
+        width: 100%;
+        height: 100%;
+        scrollbar-width: thin; /* For Firefox */
+        scrollbar-color: #0081A1 lightblue; /* For Firefox */
+    }
+
+    .scroll-container::-webkit-scrollbar {
+        width: 8px; /* Adjust the width for Chrome, Safari, and Opera */
+        height: 8px; /* Adjust the height for Chrome, Safari, and Opera */
+    }
+
+    .scroll-container::-webkit-scrollbar-thumb {
+        background-color: #0081A1; /* For Chrome, Safari, and Opera */
+        border-radius: 4px; /* Adjust the radius for a rounded look */
+    }
+
+    .scroll-container::-webkit-scrollbar-thumb:hover {
+        background-color: #0081A1; /* For Chrome, Safari, and Opera */
+    }
+
+    .scroll-container::-webkit-scrollbar-track {
+        background-color: #1a1a1a; /* For Chrome, Safari, and Opera */
+    }

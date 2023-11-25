@@ -5,6 +5,8 @@ import video from '../assets/video.mp4';
 import About from '../Components/About';
 import ServiceTiles from '../Components/ServiceTiles';
 import Benefits from '../Components/Benefits';
+import Project from '../Components/Project';
+import Form from '../Components/Form';
 
 function Home() {
   return (
@@ -29,6 +31,8 @@ function Home() {
         <About />
         <ServiceTiles />
         <Benefits />
+        <Project />
+        <Form />
       </div>
     </div>
   );
