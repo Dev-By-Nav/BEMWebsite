@@ -7,6 +7,7 @@ import ServiceTiles from '../Components/ServiceTiles';
 import Benefits from '../Components/Benefits';
 import Project from '../Components/Project';
 import Form from '../Components/Form';
+import Footer from '../Components/Footer';
 
 function Home() {
   return (
@@ -33,6 +34,7 @@ function Home() {
         <Benefits />
         <Project />
         <Form />
+        <Footer />
       </div>
     </div>
   );

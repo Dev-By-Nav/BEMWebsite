@@ -1,23 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-import { Link } from 'react-router-dom';
+import { FaTiktok, FaInstagram } from 'react-icons/fa';
+import { AiOutlineMail } from "react-icons/ai";
+
 import logo from '../assets/logo-nobg1.png';
 
 const Navbar = () => {
-  const [nav, setNav] = useState(false);
   const [scrolling, setScrolling] = useState(false);
-
-  const handleNav = () => {
-    setNav(!nav);
-  };
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolling(true);
-      } else {
-        setScrolling(false);
-      }
+      setScrolling(window.scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -29,51 +21,28 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div
-        className={`flex justify-between items-center min-w-full mx-auto px-12 text-white py-2 ${
-          scrolling ? 'fixed top-0 w-full h-16 bg-bem-primary' : 'bg-black'
-        } z-50`}
-      >
-        <Link to='/'>
+      <div className={`flex items-center justify-between min-w-full mx-auto px-12 text-white py-2 ${scrolling ? 'fixed top-0 w-full h-16 bg-bem-primary' : 'bg-black'} z-50`}>
+        <div className="flex items-center">
           <img src={logo} alt='' className='h-20 w-auto' />
-        </Link>
-        <ul className={`hidden md:flex font-semibold cursor-pointer text-white text-lg ${nav ? 'hidden' : ''}`}>
-          <li className={`p-4 ${scrolling ? 'hover:text-black' : 'hover:text-bem-primary'} font-medium`}>
-            <Link to='/'>Home</Link>
-          </li>
-          <li className={`p-4 ${scrolling ? 'hover:text-black' : 'hover:text-bem-primary'} font-medium`}>
-            <Link to='/services'>Services</Link>
-          </li>
-          <li className={`p-4 ${scrolling ? 'hover:text-black' : 'hover:text-bem-primary'} font-medium`}>
-            <Link to='/portfolio'>Portfolio</Link>
-          </li>
-          <li className={`p-4 ${scrolling ? 'hover:text-black' : 'hover:text-bem-primary'} font-medium flex-row`}>
-            <Link to='/contact-us'>Contact Us</Link>
-          </li>
-        </ul>
-        <div onClick={handleNav} className={` ${scrolling ? 'text-white' : ''} block md:hidden cursor-pointer text-bem-primary mr-4`}>
-          {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
         </div>
+        <div className="flex items-center">
 
-        <div
-          className={`${
-            nav ? 'fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-white ease-in-out duration-500 md:hidden' : 'fixed left-[-100%] z-50'
-          }`}
-        >
-          <ul className='p-4 cursor-pointer text-bem-primary  font-semibold'>
-            <li className='p-4 border-b  border-bem-primary hover:text-black font-medium'>
-              <Link to='/'>Home</Link>
-            </li>
-            <li className='p-4 border-b  border-bem-primary hover:text-black font-medium'>
-              <Link to='/services'>Services</Link>
-            </li>
-            <li className='p-4 border-b  border-bem-primary hover:text-black font-medium'>
-              <Link to='/portfolio'>Portfolio</Link>
-            </li>
-            <li className='p-4 font-medium hover:text-black flex-row'>
-              <Link to='/contact-us'>Contact Us</Link>
-            </li>
-          </ul>
+          {/* Instagram Icon */}
+          <a href="https://www.instagram.com/boldedgemedia/" target="_blank" rel="noopener noreferrer" className="text-white mx-2">
+            <FaInstagram size={25} />
+          </a>
+
+          {/* TikTok Icon */}
+          {/* <a href="your-tiktok-link" target="_blank" rel="noopener noreferrer" className="text-white mx-2">
+            <FaTiktok size={22} />
+          </a> */}
+
+          {/* Email Icon */}
+          <a href="mailto:info@boldedgemedia.co.uk" target="_blank" rel="noopener noreferrer" className="text-white mx-2">
+            <AiOutlineMail size={25} />
+          </a>
+
+          
         </div>
       </div>
     </nav>

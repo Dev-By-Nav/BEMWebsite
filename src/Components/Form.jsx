@@ -16,9 +16,9 @@ function Form() {
   }
 
   return (
-    <div className='mt-16'>
-        <h1 className='text-white flex justify-center text-xl mx-auto font-semibold font-montserrat'>Ready to elevate your business?</h1>
-        <h2 className='pt-2 pb-5 text-white flex justify-center mx-auto w-3/4 font-raleway text-center'>Contact us for a personalized consultation and let's bring your vision to life.</h2>
+    <div className='mt-16 px-4'>
+        <h1 className='text-bem-primary flex justify-center text-xl mx-auto font-semibold font-montserrat'>Ready to elevate your business?</h1>
+        <h2 className='pt-2 pb-5 text-white flex justify-center mx-auto w-3/4 font-raleway text-center'>Contact us for a free consultation and let's bring your vision to life!</h2>
 
 
 

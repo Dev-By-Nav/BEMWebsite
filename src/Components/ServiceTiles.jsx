@@ -30,13 +30,13 @@ function ServiceTiles() {
 
   return (
     <div className="">
-      <h1 className="text-2xl font-bold mb-8 mt-0 text-bn-gold font-montserrat text-center text-bem-primary">Our Services</h1>
+      <h1 className="text-2xl font-bold mb-8 mt-0  font-montserrat text-center text-bem-primary">Our Services</h1>
 
     
     <div className='flex flex-col lg:flex-row w-full sm:px-36 px-8 cursor-pointer'>
     
 
-    <Link to='/services'>
+
       <motion.div
         className="text-center relative group"
         animate={isScrolled ? 'visible' : 'hidden'}
@@ -49,7 +49,7 @@ function ServiceTiles() {
 
         <motion.img src={Service1} alt="" className="p-4" />
       </motion.div>
-    </Link>
+
 
 
       <motion.div
