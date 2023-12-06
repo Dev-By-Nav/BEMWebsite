@@ -42,7 +42,7 @@ function About() {
           className="md:pr-4"
         >
           <img
-            className="rounded-lg shadow-md sm:h-96 h-721 w-auto"
+            className="rounded-lg shadow-md sm:h-96 h-72 w-auto"
             src={image}
             alt="Your Image"
           />
@@ -53,7 +53,7 @@ function About() {
           animate={isAnimated ? 'visible' : 'hidden'}
           variants={variants}
           transition={{ duration: 1, ease: 'easeOut' }}
-          className="w-3/4 md:w-1/2 md:pl-4 mt-4 md:mt-0 text-center md:text-left"
+          className="w-full md:w-1/2 md:pl-4 mt-4 md:mt-0 text-center md:text-left"
         >
           <h1 className="text-2xl font-bold mb-8 mt-0 text-bn-gold font-montserrat text-bem-primary ">About Us</h1>
           <p className='font-raleway text-white'>

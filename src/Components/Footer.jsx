@@ -23,7 +23,7 @@ const Footer = () => {
         </div>
 
         {/* Third Section: Instagram Icon */}
-        <div className='w-1/3 m-4 flex flex-row'>
+        <div className='w-1/3 m-4 flex flex-row item-center justify-center mx-auto pb-10'>
           <a href="https://www.instagram.com/boldedgemedia/" target="_blank" rel="noopener noreferrer" className='mx-2'>
             <FaInstagram size='30px'  />
           </a>
